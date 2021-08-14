@@ -2,6 +2,9 @@
 // class that handles input/output for a console interface,
 // with print/printView cmds, which handle paging through data.
 
+// the plan is to try to use the same api for a web ui also -
+// ie could have ui-web, ui-console
+
 import fs from 'fs'
 import * as lib from './lib.js'
 

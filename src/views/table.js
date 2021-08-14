@@ -2,8 +2,12 @@
 // used by console list command
 
 // this is a table-console lib that converts raw table data to text for the console.
+
 //. handle tree recursion and graph traversal - eg use source.meta.axis for traversal.
 
+//. createTable would be better?
+//. what is source?
+//. just export the class?
 export function table({ source }) {
   const view = new TableView(source)
   return view
