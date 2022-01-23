@@ -13,7 +13,8 @@ export class Ui {
     this.readline = readline //. might not need this
     this.nline = 0
     //. get from window size
-    this.pageHeight = 20 //.
+    // this.pageHeight = 20 //.
+    this.pageHeight = 5 //.
     this.pageWidth = 100 //.
   }
 
@@ -28,15 +29,12 @@ export class Ui {
   //. might want to enforce data is a string for now?
   // if reach height of page, prints [more] and waits for keypress (buggy).
   //. keypress could be a command - p(rev), n(ext), f(irst), l(ast), q(uit)?
-  // or copy`less` cmds - f=forward, b=back, g=top, G=bottom?
+  // or copy`less` cmds - f=forward, b=back, g=top, G=bottom
   async print(data = '') {
     // split data into rows (objs?)
     let rows = []
     if (lib.isObject(data)) {
-      rows = Object.keys(data).map(key => {
-        const value = data[key]
-        return `${key}: ${value}`
-      })
+      rows = Object.keys(data).map(key => `${key}: ${data[key]}`)
     } else if (Array.isArray(data)) {
       rows = data
     } else {
@@ -51,8 +49,8 @@ export class Ui {
     // handle commands, including q for stopping output.
     let cmd = 'next'
     for (let line of lines) {
-      console.log(line)
-      this.nline++
+      console.log(this.nline, line)
+      this.nline += 1
       if (this.nline > this.pageHeight) {
         process.stdin.write('[more...]')
         const key = await this.getKeypress() //. needs to eat the key

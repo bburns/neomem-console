@@ -23,14 +23,18 @@ class TableView {
   async *getRows(start, count) {
     const { columns } = this.source.meta
     const header = columns.join('  |  ')
-    yield header
+    let n = 0
+    yield { n, header }
+    n++
     const line = `-----------------------------------------------`
-    yield line
+    yield { n, line }
+    n++
     const objs = await this.source.getObjs(start, count) // get projections for each node
     for await (let obj of objs) {
       // convert obj to row string
       const str = columns.map(column => obj[column]).join('  |  ')
-      yield str
+      yield { n, str }
+      n++
     }
   }
 }
