@@ -11,8 +11,6 @@ You can filter, sort, group, and edit data from different sources in the same wa
 
 It's open source and cross-platform. More information at https://github.com/bburns/Neomem.
 
-Development is ongoing, with a launch planned for August 2021.
-
 Follow along on Twitter - https://twitter.com/bburnskm.
 
 Note: this site is generated in Neomem - will make it look nicer later...
