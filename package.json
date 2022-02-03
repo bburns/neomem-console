@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node src/console.js",
     "//.": "move these into shell scripts?",
-    "blog": "node site/generator/generator.js",
+    "blog": "node site/generator.js",
     "console": "npm run --prefix packages/neomem-console ${COMMAND}",
     "backend": "COMMAND=start CONFIG_FILE=../../setups/demo/config.yaml npm-run-all --parallel --print-label --race gateway driver-bookmarks driver-filesys",
     "gateway": "npm run --prefix packages/neomem-gateway ${COMMAND}",
@@ -24,6 +24,8 @@
     "packages/*"
   ],
   "dependencies": {
+    "marked": "^4.0.12",
+    "node-fetch": "^3.2.0",
     "shelljs": "^0.8.4"
   },
   "devDependencies": {

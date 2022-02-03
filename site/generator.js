@@ -1,8 +1,6 @@
 // site/blog generator
-// npm run build
 
-import fs from 'fs'
-import { data } from '../../neomem-driver-json/src/data.js'
+import fs from 'fs' // node lib for filesystem
 import marked from 'marked'
 
 const templatePath = `./site/templates/index.html`
@@ -10,8 +8,6 @@ const templatePath = `./site/templates/index.html`
 const warning = `<!-- warning: generated file - do not edit -->`
 
 const print = console.log
-
-const { nodes } = data
 
 //. use a query like get({ name: 'Neomem blog' })
 const about = marked(
