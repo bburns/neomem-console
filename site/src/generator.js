@@ -1,5 +1,7 @@
 // site/blog generator
 
+// wip!
+
 import fs from 'fs' // node lib for filesystem
 import path from 'path' // node lib for path ops
 import { marked } from 'marked'
@@ -32,11 +34,11 @@ console.log(pages)
 const about = pages.find(page => page.header.includes('About'))
 
 //. make page.html template
-function getHtml(page) {
-  return `<div class='page'>
-<div class='name'>${page.name}</div>
-<div class='created'>${page.created.slice(0, 10)}</div>
-<div class='notes'>${marked(page.props.notes)}</div>
+function getHtml(post) {
+  return `<div class='post'>
+<div class='name'>${post.name}</div>
+<div class='created'>${post.created.slice(0, 10)}</div>
+<div class='notes'>${marked(post.props.notes)}</div>
 </div>
 <hr/>`
 }
