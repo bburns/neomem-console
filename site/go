@@ -1,0 +1,4 @@
+#!/bin/bash
+
+pandoc -s content/index.md --metadata title="Neomem Blog" -o build/index.html \
+  && open build/index.html

@@ -1,4 +1,4 @@
-# Neomem Blog
+<!-- # Neomem Blog -->
 
 Neomem is a combination table and document editor, with free and paid hosting plans and a marketplace for plugins.
 
