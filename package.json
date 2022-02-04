@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node src/console.js",
     "//.": "move these into shell scripts?",
-    "site": "node site/src/generator.js",
+    "site-build": "pandoc -s content/index.md -o build/index.html",
+    "site-deploy": "firebase deploy",
     "console": "npm run --prefix packages/neomem-console ${COMMAND}",
     "backend": "COMMAND=start CONFIG_FILE=../../setups/demo/config.yaml npm-run-all --parallel --print-label --race gateway driver-bookmarks driver-filesys",
     "gateway": "npm run --prefix packages/neomem-gateway ${COMMAND}",

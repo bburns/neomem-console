@@ -1,4 +1,0 @@
-#!/bin/bash
-
-pandoc -s content/index.md -o build/index.html \
-  && open build/index.html
