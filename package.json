@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node src/console.js",
     "//.": "move these into shell scripts?",
-    "site-build": "pandoc -s site/content/index.md --metadata title=\"Neomem\" -o site/build/index.html",
+    "site-build": "pandoc -s site/content/index.md -f gfm --metadata title=\"Neomem\" -o site/build/index.html",
     "site-preview": "open site/build/index.html",
     "site-deploy": "firebase deploy",
     "console": "npm run --prefix packages/neomem-console ${COMMAND}",
