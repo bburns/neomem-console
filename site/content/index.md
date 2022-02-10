@@ -10,6 +10,18 @@ Follow along on Twitter - https://twitter.com/bburnskm.
 
 This page is generated using Pandoc on a Markdown file.
 
+## Supabase vs Postgres with Foreign Data Wrappers
+
+2022-02-09
+
+I was trying out Supabase, which is Postgres in the cloud, but it's too slow to use for local editing. So, will try a local Postgres instance.
+
+The trend seems to be towards open data formats like Markdown for note-taking apps, backed by a graph database of some sort. But... if I took that approach I'd have to compete with Obsidian and LogSeq. And I'd lose...
+
+But I recently came across Postgres Foreign Data Wrappers, which let you connect all kinds of data sources to Postgres, where you can query them like any other table with SQL. Then I could connect various datasources and have a unified interface for them.
+
+So, I'll be playing around with that for a bit.
+
 ## Architecture and transcript
 
 2021-06-06
