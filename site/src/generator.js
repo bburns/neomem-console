@@ -1,6 +1,6 @@
 // site/blog generator
 
-// wip!
+// wip
 
 import fs from 'fs' // node lib for filesystem
 import path from 'path' // node lib for path ops

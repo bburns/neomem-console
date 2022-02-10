@@ -1,5 +1,7 @@
 convert markdown posts to html
 
-wip!
+wip
 
-https://marked.js.org/
+currently just uses pandoc to generate html -
+
+will try https://marked.js.org/
